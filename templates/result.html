@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Result</title>
+    <style>
+        .note {
+            color: #777;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bs-example container" data-example-id="striped-table">
+        <table class="table table-striped table-bordered table-hover" style="margin-top: 50px;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">{{ req.name }}</th>
+                    <td>{{ req.age }}</td>
+                    <td>{{ req.height }}</td>
+                    <td>{{ req.weight }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="margin-top: 50px;">
+            <h1 class="h1">Result</h1>
+        </div>
+        <!-- Showing the result -->
+        <table class="table table-striped table-bordered table-hover" style="margin-top: 30px;">
+            <thead>
+                <tr>
+                    {% for i in keys %}
+                    <th>{{ i }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {% for i in dict1.values() %}
+                    <th>{{ i }}</th>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+        <div style="justify-content: end;">
+            <form action="/">
+                <button type="submit" class="btn btn-success" style="float: right;" onclick="">Check Again</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
