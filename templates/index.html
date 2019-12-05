@@ -25,24 +25,9 @@
         <!-- Form -->
         <div class="row card">
             <section class="col-xs-12">
-                <form method="POST" action="/result">
+                <form method="POST" action="/result" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="inputName">Name</label>
-                        <input class="form-control" type="text" name="name" id="inputName" required placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAge">Age</label>
-                        <input class="form-control" type="number" name="age" id="inputAge" required placeholder="Age">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputHeight">Height</label>
-                        <input class="form-control" type="number" name="height" step="0.01" id="inputHeight" required
-                            placeholder="Height in feet...">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputWeight">Weight</label>
-                        <input class="form-control" type="number" name="weight" step="0.01" id="inputWeight" required
-                            placeholder="Weight">
+                        <input class="form-control" type="file" name="file" accept=".xlsx, .xls, .csv" required>
                     </div>
                     <input type="submit" value="Submit" class="btn btn-default pull-right">
                 </form>
